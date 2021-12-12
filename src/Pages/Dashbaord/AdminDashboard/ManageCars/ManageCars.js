@@ -33,7 +33,7 @@ const ManageCars = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/allCars`;
+        const url = `https://lit-castle-13387.herokuapp.com/allCars`;
         fetch(url)
             .then(res => res.json())
             .then(data => setCars(data))
@@ -42,7 +42,7 @@ const ManageCars = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/allCars/${id}`, {
+            fetch(`https://lit-castle-13387.herokuapp.com/allCars/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })

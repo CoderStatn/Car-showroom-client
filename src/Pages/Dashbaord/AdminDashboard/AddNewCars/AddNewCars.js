@@ -17,7 +17,7 @@ const AddNewCars = () => {
 
     const onSubmit = (data) => {
         data.email = user?.email;
-        fetch("http://localhost:5000/allCars", {
+        fetch("https://lit-castle-13387.herokuapp.com/allCars", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

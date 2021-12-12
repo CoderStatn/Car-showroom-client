@@ -229,7 +229,7 @@ const AddReview = () => {
     }
 
     const handleReview = e => {
-        fetch("http://localhost:5000/reviews", {
+        fetch("https://lit-castle-13387.herokuapp.com/reviews", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(reviewData),

@@ -35,7 +35,7 @@ const MyOrders = () => {
     console.log(user.email)
 
     useEffect(() => {
-        const url = `http://localhost:5000/orders?email=${user.email}`;
+        const url = `https://lit-castle-13387.herokuapp.com/orders?email=${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setMyOrders(data))
@@ -44,7 +44,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Do you want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://lit-castle-13387.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
